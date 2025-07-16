@@ -33,6 +33,7 @@
   flex-direction: row;
   gap: 40px;
   width: 100%;
+  align-items: stretch;
 }
 .custom-card {
   background: rgba(255,255,255,0.82);
@@ -162,8 +163,9 @@
   border-radius: 24px;
   box-shadow: 0 4px 24px 0 rgba(53,88,138,0.10);
   padding: 32px;
-  max-width: 700px;
-  margin: 32px auto 0 auto;
+  max-width: 600px;
+  margin: 32px 0 0 0; /* left align, no auto */
+  width: 55%; /* match left card width */
 }
 .custom-bottom-title {
   font-size: 1.45rem;
@@ -191,12 +193,12 @@
   border-radius: 32px;
   box-shadow: 0 8px 40px 0 rgba(53,88,138,0.10);
   padding: 48px 40px 40px 40px;
-  min-height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1 1 0;
   min-width: 0;
+  box-sizing: border-box;
 }
 .custom-form {
   width: 100%;
@@ -300,10 +302,155 @@
   background: #C7A47B;
   color: #fff;
 }
+
+.custom-left-card {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 40px 0 rgba(53,88,138,0.10);
+  min-height: 420px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+.custom-left-panel {
+  background: rgba(246, 243, 239, 0.98);
+  width: 50%;
+  padding: 48px 36px 40px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  min-width: 0;
+}
+.custom-blur-bg {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(ellipse at 60% 40%, #e6e6fa 0%, #6B2D7C 60%, transparent 100%);
+  filter: blur(40px);
+  opacity: 0.45;
+  z-index: 1;
+}
+.custom-left-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 32px;
+  margin-top: 8px;
+  text-align: left;
+}
+.custom-left-title-bold {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+  line-height: 1.1;
+}
+.custom-left-title-light {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.1;
+}
+.custom-feature-list-2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+.custom-feature-list-2 li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+}
+.custom-feature-list-2 li span {
+  color: #222;
+  font-weight: 600;
+}
+.custom-right-panel {
+  flex: 1;
+  width: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 32px 24px 32px 0;
+  position: relative;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  min-width: 0;
+  z-index: 2;
+}
+.custom-help-text {
+  position: absolute;
+  top: 32px;
+  right: 36px;
+  color: #555;
+  font-size: 1.15rem;
+  font-weight: 500;
+  z-index: 2;
+}
+.custom-badge-container {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+}
+.custom-badge-svg {
+  width: 220px;
+  height: 220px;
+  display: block;
+}
+.custom-contact-btn {
+  background: #C7A47B;
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px 0 rgba(53,88,138,0.10);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 32px;
+  right: 36px;
+  z-index: 2;
+}
+.custom-contact-btn .arrow {
+  font-size: 1.3em;
+}
 @media (max-width: 900px) {
   .custom-row {
     flex-direction: column;
     gap: 24px;
+    align-items: stretch;
   }
   .custom-card, .custom-form-card {
     padding: 24px 12px 24px 12px;
@@ -321,5 +468,38 @@
   .custom-bottom-card {
     padding: 14px;
     border-radius: 14px;
+    width: 100%;
+    max-width: 100%;
+    margin: 18px 0 0 0;
+  }
+  .custom-left-card {
+    flex-direction: column;
+    max-width: 100%;
+    min-height: unset;
+  }
+  .custom-left-panel, .custom-right-panel {
+    width: 100%;
+    border-radius: 0;
+    padding: 24px 12px;
+  }
+  .custom-badge-container {
+    position: static;
+    transform: none;
+    margin: 0 auto 16px auto;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+  }
+  .custom-contact-btn {
+    position: static;
+    margin: 24px auto 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .custom-help-text {
+    position: static;
+    text-align: center;
+    margin-bottom: 12px;
   }
 } 
