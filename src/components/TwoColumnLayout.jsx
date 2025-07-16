@@ -43,12 +43,12 @@ function LeftCard() {
   return (
     <div className="custom-left-card">
       <div className="custom-left-panel">
-        <div className="custom-blur-bg" />
+        {/* Removed custom-blur-bg */}
         <div className="custom-left-title">
           <span className="custom-left-title-bold">Free</span><br />
           <span className="custom-left-title-light">Case <br /> Review</span>
         </div>
-        <div className="custom-left-spacer" style={{ flex: 1 }} />
+        <div style={{ flex: 1 }} />
         <ul className="custom-feature-list-2">
           <li><FeatureIcon type="confidential" /> <span>100% Confidential</span></li>
           <li><FeatureIcon type="nowin" /> <span>No Win, No Fee</span></li>
