@@ -13,7 +13,7 @@ A pixel-perfect, responsive React application featuring a modern two-column layo
 
 ## 🖼️ Preview
 
-![Screenshot](public/vite.svg) 
+![Screenshot](public/screenshot.png) 
 
 ## 🚀 Tech Stack
 
