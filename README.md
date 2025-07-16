@@ -1,12 +1,73 @@
-# React + Vite
+# Kaizen Assignment Frontend App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pixel-perfect, responsive React application featuring a modern two-column layout with glassmorphism, a badge, and a claim form. This app is visually stunning, mobile-friendly, and easy to maintain.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Two-Column Responsive Layout**: Desktop and mobile optimized, with a glassmorphic left card and a claim form on the right.
+- **Glassmorphism Effect**: The left panel uses a strong glass effect with blur and transparency.
+- **SVG Badge**: A curved-text badge ("ONLY 6 SLOTS LEFT") overlapping the card.
+- **Feature List**: Custom SVG icons and a list of key features (100% Confidential, No Win No Fee, Free Case Evaluation).
+- **Claim Form**: Modern, accessible form with validation, styled inputs, and checkboxes for privacy and consent.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖼️ Preview
+
+![Screenshot](public/vite.svg) 
+
+## 🚀 Tech Stack
+
+- **React 18+** (Vite-powered)
+- **CSS Modules** (CustomLayout.css, with CSS variables)
+- **SVG for icons and badges**
+- **Tailwind CSS** (for global resets and utility classes)
+
+## 📁 Project Structure
+
+```
+kaizen-frontendApp/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── ClaimForm.jsx
+│   │   └── TwoColumnLayout.jsx
+│   ├── CustomLayout.css
+│   ├── index.css
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+## 🛠️ Setup & Development
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+3. **Open in your browser:**
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## 📝 Customization
+- **Colors & Glass Effect:** Easily adjust colors and glassmorphism via CSS variables in `CustomLayout.css`.
+- **Form Fields:** Edit `ClaimForm.jsx` to add or remove fields as needed.
+- **Feature List & Badge:** Update the SVG or feature list in `TwoColumnLayout.jsx` for your campaign.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 🙏 Credits
+- Figma design inspiration and assets provided by the client.
+- Built with ❤️ by the Kaizen Assignment team.
+
+---
+
+For questions or support, please open an issue or contact the maintainer.
