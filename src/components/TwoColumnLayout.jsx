@@ -56,7 +56,7 @@ function LeftCard() {
         </ul>
       </div>
       <div className="custom-right-panel">
-        <div className="custom-help-text">We are here to help!</div>
+        <div className="custom-help-text">We are here <br /> to help!</div>
         <div className="custom-badge-container"><Only6SlotsBadge /></div>
         <button className="custom-contact-btn">Contact us <span className="arrow">&gt;</span></button>
       </div>
