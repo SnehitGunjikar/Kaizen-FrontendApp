@@ -77,7 +77,7 @@ function TwoColumnLayout() {
                         <ClaimForm />
                     </div>
                 </div>
-                {/* Bottom Card */}
+                {/* Bottom Card (outside custom-row for correct stacking) */}
                 <div className="custom-bottom-card">
                     <div className="custom-bottom-title">Have you or a loved one been affected by <span>Mesothelioma?</span></div>
                     <div className="custom-bottom-desc">As a woman, you've carried the weight of care, love, and resilience. Now it's time someone stands with you.</div>

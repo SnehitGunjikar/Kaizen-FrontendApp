@@ -23,7 +23,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 0 0 0;
+  padding: 30px 0 0 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -35,69 +35,6 @@
   width: 100%;
   align-items: stretch;
 }
-.custom-card {
-  background: rgba(255,255,255,0.82);
-  border-radius: 32px;
-  box-shadow: 0 8px 40px 0 rgba(53,88,138,0.10);
-  padding: 48px 40px 40px 40px;
-  position: relative;
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: 540px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: visible;
-}
-.custom-card-gradient {
-  position: absolute;
-  left: -60px;
-  top: 120px;
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(ellipse at center, #e6e6fa 0%, #6B2D7C 60%, transparent 100%);
-  filter: blur(32px);
-  opacity: 0.6;
-  z-index: 0;
-}
-.custom-card-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.custom-card-title {
-  font-size: 2.7rem;
-  font-weight: 900;
-  color: #3B2566;
-  line-height: 1.05;
-  margin-bottom: 1.5rem;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.custom-badge {
-  position: absolute;
-  top: 60px;
-  right: -80px;
-  width: 200px;
-  height: 200px;
-  background: #35588A;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 24px 0 rgba(53,88,138,0.18);
-  transform: rotate(25deg);
-  z-index: 2;
-}
-.custom-badge-text {
-  color: #fff;
-  font-size: 1.35rem;
-  font-weight: 700;
-  text-align: center;
-  width: 140px;
-  letter-spacing: 0.04em;
-}
 .custom-help-text {
   position: absolute;
   top: 24px;
@@ -107,33 +44,6 @@
   font-weight: 500;
   z-index: 2;
 }
-.custom-feature-list {
-  margin-top: 140px;
-  margin-bottom: 40px;
-  z-index: 2;
-  list-style: none;
-  padding: 0;
-}
-.custom-feature-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.08rem;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-.custom-feature-list .icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-.custom-feature-list .icon.confidential { background: #E3EAF6; color: #35588A; }
-.custom-feature-list .icon.nowin { background: #F1E6F6; color: #6B2D7C; }
-.custom-feature-list .icon.free { background: #F6EDE3; color: #C7A47B; }
 .custom-contact-btn {
   background: #C7A47B;
   color: #fff;
@@ -317,7 +227,7 @@
   margin-bottom: 32px;
 }
 .custom-left-panel {
-  background: rgba(241,235,230,255);
+  background: rgba(240, 212, 189, 0.247);
   width: 50%;
   padding: 48px 36px 40px 36px;
   display: flex;
@@ -459,7 +369,6 @@
     align-items: stretch;
   }
   .custom-bottom-card {
-    order: -2;
     width: 100%;
     max-width: 100%;
     margin: 0 0 0 0;
@@ -467,43 +376,16 @@
     border-radius: 14px;
   }
   .custom-left-card {
-    order: -1;
-    flex-direction: column;
     max-width: 100%;
     min-height: unset;
     margin-bottom: 0;
+    flex-direction: column;
   }
   .custom-form-card {
-    order: 0;
     max-width: 100%;
     height: auto;
     min-height: unset;
     padding: 24px 12px 24px 12px;
     border-radius: 20px;
-  }
-  .custom-left-panel, .custom-right-panel {
-    width: 100%;
-    border-radius: 0;
-    padding: 24px 12px;
-  }
-  .custom-badge-container {
-    position: static;
-    transform: none;
-    margin: 0 auto 16px auto;
-    display: flex;
-    justify-content: center;
-    width: 180px;
-    height: 180px;
-  }
-  .custom-contact-btn {
-    position: static;
-    margin: 24px auto 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-  .custom-help-text {
-    position: static;
-    text-align: center;
-    margin-bottom: 12px;
   }
 } 
